@@ -19,7 +19,7 @@ export const Game = () => {
 
 
   // Onscreen Computer Turn Messages
-  const [messages, setMessages] = useState(["🤖 'Bleep bleep bloop bloop'", "🤖 'I'm a Juno master'", "🤖 'No way you're gonna beat me!'", "🤖 'Bleep bleep bloop bloop'"])
+  const [messages, setMessages] = useState(["🤖 'Bleep bleep bloop bloop'", "🤖 'I'm a Juno master!'", "🤖 'No way you're gonna beat me!'", "🤖 'Bleep bleep bloop bloop'"])
 
   // Function that updates the messages, 
   // but only keeps 4 most recent messages
@@ -63,7 +63,7 @@ export const Game = () => {
       const newComputerHand = computerHand.concat(newCard);
       setComputerHand(newComputerHand);
 
-      updateMessages(`👀 Computer drew a card...`)
+      updateMessages(`👀 JunoBot drew a card...`)
       //console.log(computerHand);
     }
 
@@ -112,7 +112,7 @@ export const Game = () => {
           number: number
         }
 
-        updateMessages(`😏 Computer played a ${newMatchCard.colour} ${newMatchCard.number}! `)
+        updateMessages(`😏 JunoBot played a ${newMatchCard.colour} ${newMatchCard.number}! `)
 
         setMatchCard(newMatchCard);
 
@@ -253,7 +253,7 @@ export const Game = () => {
 
                         <div className="columns is-centered is-mobile is-multiline">
                           <div className="column">
-                            <h1 class="title has-text-right has-text-white" >Computer's Hand</h1>
+                            <h1 class="title has-text-right has-text-white" >JunoBot's Hand</h1>
                             <ComputerHand computerHand={computerHand} />
                           </div>
                         </div>
